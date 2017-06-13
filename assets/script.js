@@ -1,5 +1,24 @@
 $(document).ready(function() {
 
+//add controls
+document.addEventListener("keydown", movement);
+
+function movement(direction){
+    var key = direction.keyCode;
+    if(key === 38){
+        console.log("up");
+    } else if (key === 37) {
+    	console.log("left");
+    } else if (key === 39){
+    	console.log("right");
+    } else if (key === 40) {
+    	console.log("down")
+    } else {
+        alert("Please use the arrow keys");
+    }
+}
+
+//create board
 var rows = 40;
 var columns = 40;
 var $row = $("<div />", {
