@@ -1,7 +1,7 @@
 
 #board {
-    width: 90%;
-    margin: 0 auto;
+    width: 880px;
+/*    margin: 0 auto;*/
 }
 
 .row {
@@ -15,4 +15,14 @@
     display: inline-block;
     float: left;
     background: #FFFFFF;
+}
+
+#character {
+	position: absolute; 
+/*	left: 400px; */
+/*	right: 400px; */
+/*	top: 400px; */
+/*	bottom: 400px; */
+	height: 22px; 
+	width: 22px;
 }
