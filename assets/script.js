@@ -8,6 +8,7 @@ var y = 405;
 character.style.left = x + "px";
 character.style.top = y + "px";
 
+// snake controls
 function movement(direction){
     var key = direction.keyCode;
     if(key === 38){
@@ -34,6 +35,18 @@ function movement(direction){
         alert("Please use the arrow keys");
     }
 }
+
+//render fruit: make fruit randomly appear
+function fruit(){
+
+}
+// function to grow snake if it eats the food
+
+// bring the snake to life by running a game loop that uses setTimeout()
+//Each turn, invoke a move() function which moves the snake one square in the current direction of travel for each turn
+
+//end game: Create logic which ends the game if the snake head goes off the board.
+//end game if snake eats its body
 
 //create board
 var rows = 40;
