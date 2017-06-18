@@ -1,4 +1,6 @@
-
+body {
+    background-color: #000000;
+}
 #board {
     width: 880px;
 /*    margin: 0 auto;*/
@@ -11,10 +13,10 @@
 .square {
     width: 22px;
     height: 22px;
-    outline: 1px solid green;
+    outline: 1px solid white;
     display: inline-block;
     float: left;
-    background: #FFFFFF;
+    background: #D2D6D9;
 }
 
 #character {
