@@ -1,9 +1,7 @@
-body {
-    background-color: #000000;
-}
+
+/*
 #board {
     width: 880px;
-/*    margin: 0 auto;*/
 }
 
 .row {
@@ -21,10 +19,41 @@ body {
 
 #character {
 	position: absolute; 
-/*	left: 400px; */
-/*	right: 400px; */
-/*	top: 400px; */
-/*	bottom: 400px; */
+
 	height: 22px; 
 	width: 22px;
+}*/
+
+body {
+    background-color:  #f9f2ec;
 }
+
+.box {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    background-color: #ECD9C6;
+}
+
+.row {
+    clear: both;
+}
+
+#content {
+
+}
+
+.body {
+    background-color: #00B3B3;
+}
+
+.head {
+    background-color: #CCFFFF;
+}
+
+.fruit {
+    background-color: #993333;
+}
+
