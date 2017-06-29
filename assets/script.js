@@ -9,7 +9,7 @@ var snake = [];
 
 function create_board(x,y){
     var count = 1;
-    var $container = $("<div></div>");
+    var $container = $("<div id='gameboard'></div>");
 
     for(var i = 0; i <= x; i++) {
         for (var j = 0; j < y; j++){
@@ -65,28 +65,28 @@ function movement(){
 
         switch(dir) {
             case "right":
-                var nextID = headLocation + 1;
+                var newLocation = headLocation + 1;
                 break;
             case "left":
-                var nextID = headLocation - 1;
+                var newLocation = headLocation - 1;
                 break;
             case "up":
-                var nextID = headLocation - 40;
+                var newLocation = headLocation - 40;
                 break;
             case "down":
-                var nextID = headLocation + 40;
+                var newLocation = headLocation + 40;
                 break;
         }
 
         //eat fruit
-        if ($("#" + nextID).hasClass("fruit")){
+        if ($("#" + newLocation).hasClass("fruit")){
             tail = snake[0];
-            $("#" + nextID).removeClass('fruit');
+            $("#" + newLocation).removeClass('fruit');
             fruit();
         }
 
         //end if snake touches body
-        if ($("#" + nextID).hasClass("body")){
+        if ($("#" + newLocation).hasClass("body")){
             alert('Game over!');
             for (var i = 0; i <= snake.length; i++){
                 $("#" + snake[i]).removeClass("body");
@@ -95,8 +95,8 @@ function movement(){
             direction = "";
         }
 
-        //end if out of bounds
-        if (!($("#" + nextID).hasClass("box"))){
+        //end game if touch edge
+        if (!($("#" + newLocation).hasClass("box"))){
             alert('Game over!');
             for (var i = 0; i <= snake.length; i++){
                 $("#" + snake[i]).removeClass('body');
@@ -117,8 +117,8 @@ function movement(){
         for (var i = 0; i < snake.length; i++){
             $("#" + snake[i]).addClass('body');
         }
-        snake[snake.length - 1] = nextID;
-        $("#" + nextID).addClass('head');
+        snake[snake.length - 1] = newLocation;
+        $("#" + newLocation).addClass('head');
         $("#" + headLocation).removeClass('head');  
     };
 }

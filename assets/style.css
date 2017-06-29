@@ -1,31 +1,9 @@
-
-/*
-#board {
-    width: 880px;
-}
-
-.row {
-    height: 22px;
-}
-
-.square {
-    width: 22px;
-    height: 22px;
-    outline: 1px solid white;
-    display: inline-block;
-    float: left;
-    background: #D2D6D9;
-}
-
-#character {
-	position: absolute; 
-
-	height: 22px; 
-	width: 22px;
-}*/
-
 body {
     background-color:  #f9f2ec;
+}
+
+h1 {
+    text-align: center;
 }
 
 .box {
@@ -41,8 +19,10 @@ body {
     clear: both;
 }
 
-#content {
-
+#gameboard {
+    width: 51%;
+    margin: auto;
+    text-align: center;
 }
 
 .body {
